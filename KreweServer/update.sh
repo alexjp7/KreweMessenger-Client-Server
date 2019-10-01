@@ -1,0 +1,1 @@
+echo "Killing server....";./kill.sh;echo "Re-compiling server...";./comp.sh;echo "Restarting Server....";./start.sh;

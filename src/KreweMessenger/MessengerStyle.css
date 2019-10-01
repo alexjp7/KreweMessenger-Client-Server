@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/02/2019, 2:45:29 AM
+    Author     : Alex
+*/
+
+
+
+
+.buttona
+{
+    -fx-background-color:#7ac1af;
+    -fx-text-fill: white;
+    -fx-border-radius:10px;
+    
+}
+
+
+.roota
+{
+   -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+    -fx-background-color: #f991af;
+    
+}
+
+
+
+

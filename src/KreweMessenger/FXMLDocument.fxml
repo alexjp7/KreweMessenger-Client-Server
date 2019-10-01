@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="424.0" prefWidth="443.0" stylesheets="@MessengerStyle.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="KreweMessenger.KreweClient">
+    <children>
+      <Pane id="mainPane" fx:id="mainPane" layoutY="-7.0" prefHeight="431.0" prefWidth="513.0">
+         <children>
+            <TextArea id="chatFeed" fx:id="chatFeed" editable="false" layoutX="28.0" layoutY="75.0" prefHeight="252.0" prefWidth="334.0" text="&#10;">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Text">
+                           <graphic>
+                              <ColorPicker id="chatFeedTextPicker" fx:id="chatFeedTextPicker" onHiding="#handleChatFeedTextColor" />
+                           </graphic>
+                        </MenuItem>
+                      <MenuItem mnemonicParsing="false" text="Background">
+                           <graphic>
+                              <ColorPicker id="chatFeedBkgPicker" fx:id="chatFeedBkgPicker" onHiding="#handleChatFeedBkg" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TextArea>
+            <TextField id="talkSpace" fx:id="talkSpace" layoutX="28.0" layoutY="348.0" prefHeight="45.0" prefWidth="334.0" promptText="Press Enter To Chat...">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Text">
+                           <graphic>
+                              <ColorPicker id="talkSpaceFontPicker" fx:id="talkSpaceFontPicker" onHiding="#handleTalkSpaceFont" />
+                           </graphic>
+                        </MenuItem>
+                      <MenuItem mnemonicParsing="false" text="Background">
+                           <graphic>
+                              <ColorPicker id="talkSpaceBkgPicker" fx:id="talkSpaceBkgPicker" onHiding="#handleTalkSpaceBkg" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu></TextField>
+            <Label id="appLabel" fx:id="appLabel" layoutX="176.0" layoutY="2.0" prefHeight="50.0" prefWidth="162.0" text="KreweMessenger" textFill="#000000ad">
+               <font>
+                  <Font size="21.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Text">
+                           <graphic>
+                              <ColorPicker id="mainFrameFontPicker" fx:id="mainFrameFontPicker" onHiding="#handleMainFrameText" />
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Background">
+                           <graphic>
+                              <ColorPicker id="mainFrameBkgPicker" fx:id="mainFrameBkgPicker" onHiding="#handleMainFrameBkgPicker" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Label>
+            <Button id="enterText" fx:id="enterText" defaultButton="true" layoutX="381.0" layoutY="348.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="105.0" text="Send" />
+            <TextArea id="chatFeed" fx:id="lobbyArea" editable="false" layoutX="381.0" layoutY="75.0" prefHeight="252.0" prefWidth="105.0" promptText="Lobby Members" text="&#10;">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Text">
+                           <graphic>
+                              <ColorPicker id="lobbyTextColorPicker" fx:id="lobbyTextColorPicker" onHiding="#handleLobbyTextColorPicked" promptText="Text" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Background">
+                           <graphic>
+                              <ColorPicker fx:id="lobbyAreaBkgColorPicker" onHiding="#handleLobbyBkgColorPicked" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TextArea>
+            <Label id="connectionInfoLabel" fx:id="connectionInfoLabel" layoutX="50.0" layoutY="52.0" prefHeight="17.0" prefWidth="68.0" textAlignment="CENTER" />
+            <Circle id="connectionStatus" fx:id="connectionStatus" fill="#52d94e" layoutX="39.0" layoutY="60.0" radius="6.0" stroke="#ededed00" strokeType="INSIDE" />
+            <Label fx:id="systemPrompt" layoutX="29.0" layoutY="401.0" prefHeight="17.0" prefWidth="360.0" />
+            <Button id="saveButton" fx:id="saveButton" layoutX="403.0" layoutY="40.0" mnemonicParsing="false" onMouseClicked="#handleSaveButton" prefHeight="25.0" prefWidth="61.0" text="Save" textAlignment="CENTER" textFill="#000000e4" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
